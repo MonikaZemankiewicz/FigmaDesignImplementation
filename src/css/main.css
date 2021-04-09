@@ -92,8 +92,8 @@ Navbar
   max-width: 1170px;
   margin-left: 1rem;
   margin-right: 1rem;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
@@ -144,6 +144,12 @@ Navbar
   .nav-center {
     padding-top: 0rem;
     padding-bottom: 0rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .nav-logo {
+    margin-left: 3rem;
   }
 }
 
@@ -857,10 +863,6 @@ a:active {
   .footer-bottom {
     display: flex;
     justify-content: space-around;
-  }
-
-  .nav-logo {
-    margin-left: 3rem;
   }
 
   .footer-bottom p {
