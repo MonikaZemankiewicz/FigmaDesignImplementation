@@ -55,7 +55,7 @@ const Hero = () => {
         </form>
       </div>
       <div className="arrow">
-        <a href="/">
+        <a href="/#Team">
           <img src={arrow} alt="logo " />
         </a>
       </div>

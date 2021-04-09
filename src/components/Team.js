@@ -8,7 +8,7 @@ import team4 from "../assets/team4.svg";
 
 const Team = () => {
   return (
-    <section className="team">
+    <section className="team" id="Team">
       <h1> team </h1>
       <Carousel breakPoints={breakPoints}>
         {items.map((item, index) => {

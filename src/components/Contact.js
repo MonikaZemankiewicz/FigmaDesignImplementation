@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className="contact">
+    <section className="contact" id="Contact">
       <h1>Contact us</h1>
       <p>
         Most calendars are designed for teams. Slate is designed for freelancers
