@@ -1,0 +1,39 @@
+<svg width="832" height="798" viewBox="0 0 832 798" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect width="832" height="798" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M832 -5.5V447.022L694.114 523.81C650.033 548.359 598.302 555.339 549.291 543.352L5 410.229L-1.5 -5.5H832Z" fill="url(#paint0_linear)"/>
+<g filter="url(#filter0_d)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M394.084 228.489C405.645 188.159 382.34 146.084 342.019 134.491L-4.01075 34.9999L-4.05068 431.351L237.095 500.43C277.436 511.986 319.504 488.658 331.067 448.319L394.084 228.489Z" fill="#4250BF"/>
+</g>
+<g filter="url(#filter1_d)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V198.238L551.701 345.057C591.913 355.758 633.254 332.132 644.446 292.053L726 0L0 0Z" fill="#3947B6"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" x="-134.051" y="-91" width="661.097" height="728.388" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="65"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.14902 0 0 0 0 0.2 0 0 0 0 0.588235 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<filter id="filter1_d" x="-106" y="-95" width="938" height="559.631" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="11"/>
+<feGaussianBlur stdDeviation="53"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.164706 0 0 0 0 0.219608 0 0 0 0 0.615686 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear" x1="349.535" y1="365.859" x2="841.344" y2="306.7" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3847B5"/>
+<stop offset="1" stop-color="#253194"/>
+</linearGradient>
+<clipPath id="clip0">
+<rect width="832" height="798" fill="white"/>
+</clipPath>
+</defs>
+</svg>
