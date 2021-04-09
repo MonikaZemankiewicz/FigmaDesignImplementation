@@ -16,6 +16,15 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-remark-embed-video",
+      options: {
+        width: auto,
+        ratio: 1.77,
+        related: false,
+        noIframeBorder: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-webfonts`,
       options: {
         fonts: {

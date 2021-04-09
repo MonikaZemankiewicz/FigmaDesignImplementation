@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import closebtn from "../assets/closebtn.svg";
 
 const Item = ({ name, image, desc, position }) => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
-  console.log(modalIsOpen);
+
   return (
-    <div onClick={() => setModalIsOpen(true)} className="item">
-      <img src={image} alt="twitter" />
-      <h2>{name}</h2>
-      <span>{position}</span>
-      <p>{desc}</p>
+    <section>
+      <div onClick={() => setModalIsOpen(true)} className="item">
+        <img src={image} alt="twitter" />
+        <h2>{name}</h2>
+        <span>{position}</span>
+        <p>{desc}</p>
+      </div>{" "}
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
@@ -40,38 +42,15 @@ const Item = ({ name, image, desc, position }) => {
           },
         }}
       >
+        <button className="close-modal" onClick={() => setModalIsOpen(false)}>
+          <img src={closebtn} alt="close modal" />
+        </button>
         <div className="modal-info">
-          <button onClick={() => setModalIsOpen(false)}>
-            <img src={closebtn} alt="close modal" />
-          </button>
-
-          <h2>Modal Title</h2>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet. Amet minim mollit non deserunt
-            ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-            duis enim velit mollit. Exercitation veniam consequat sunt nostrud
-            amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-            amet sint. Velit officia consequat duis enim velit mollit.
-            Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
-            non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-            officia consequat duis enim velit mollit. Exercitation veniam
-            consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco
-            est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-            velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet
-            minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-            Velit officia consequat duis enim velit mollit. Exercitation veniam
-            consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco
-            est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-            velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet
-            minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-            Velit officia consequat duis enim velit mollit. Exercitation veniam
-            consequat sunt nostrud amet.
-          </p>
+          <h2>{name}</h2>
+          <p>{desc}</p>
         </div>
       </Modal>
-    </div>
+    </section>
   );
 };
 

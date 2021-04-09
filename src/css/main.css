@@ -239,11 +239,63 @@ Hero
 }
 
 .video-container {
+  position: relative;
   border: 1px solid black;
   border-radius: 0.5rem;
   height: 222px;
-  width: 100%;
+  width: 338px;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 638px;
+  background: url("../assets/video.svg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  top: 50%;
+
+  outline: 0;
+}
+
+.play-button:hover {
+  transform: scale(0.9);
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  margin-top: 2rem;
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.close-modal {
+  background: transparent;
+  outline: none;
+  border: none;
+  position: absolute;
+  right: 4.75%;
+  top: 2.75%;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+
+.close-modal:hover {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.close-modal:focus {
+  outline: none;
 }
 
 @media screen and (min-width: 660px) {
@@ -319,6 +371,12 @@ Hero
     margin-top: 5rem;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .video-container {
+    width: 638px;
     height: 425px;
   }
 }
@@ -391,6 +449,10 @@ Team
 ===============
 */
 
+.team {
+  padding: 2rem 1rem;
+}
+
 .item {
   text-align: center;
   padding: 0 0.7rem;
@@ -439,6 +501,12 @@ Team
   font-weight: 400;
   color: rgba(69, 81, 95, 1);
   margin-top: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 250px;
+  text-align: center;
 }
 
 .item img {
@@ -455,6 +523,7 @@ Team
   background-color: rgba(196, 196, 196, 1);
   box-shadow: none;
   size: 0.5rem;
+  outline: none;
 }
 
 .rec.rec-dot_active {
@@ -463,7 +532,14 @@ Team
   size: 0.5rem;
 }
 
-@media screen and (min-width: 640px) {
+.rec.rec-dot:hover {
+  box-shadow: none;
+}
+.rec.rec-dot:focus {
+  box-shadow: none;
+}
+
+@media screen and (min-width: 650px) {
   .rec.rec-dot {
     display: none;
   }
