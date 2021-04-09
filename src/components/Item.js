@@ -15,7 +15,6 @@ const Item = ({ name, image, desc, position }) => {
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
         ariaHideApp={false}
-        appElement={document.getElementById("app")}
         style={{
           overlay: {
             position: "fixed",
