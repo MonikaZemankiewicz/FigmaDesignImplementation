@@ -5,7 +5,8 @@ import facebook from "../assets/facebook.svg";
 import play from "../assets/play.svg";
 import { graphql, useStaticQuery } from "gatsby";
 import Modal from "react-modal";
-import Video from "../components/video";
+import Video from "../components/Video";
+
 import closebtn from "../assets/closebtn.svg";
 
 const query = graphql`
