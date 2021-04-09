@@ -36,7 +36,7 @@ const Contact = () => {
               </label>
             </div>
 
-            <button type="submit" className="submit-btn">
+            <button type="submit" className="submit-btn btn">
               Send
             </button>
           </div>

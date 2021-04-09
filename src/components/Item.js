@@ -1,18 +1,37 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import closebtn from "../assets/closebtn.svg";
+import fbsquare from "../assets/fbsquare.svg";
+import linkedinsquare from "../assets/linkedinsquare.svg";
 
 const Item = ({ name, image, desc, position }) => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
 
   return (
     <section>
-      <div onClick={() => setModalIsOpen(true)} className="item">
-        <img src={image} alt="twitter" />
+      <div className="item">
+        <img
+          onClick={() => setModalIsOpen(true)}
+          className="item_profile-pic"
+          src={image}
+          alt="profile picture"
+        />
         <h2>{name}</h2>
         <span>{position}</span>
         <p>{desc}</p>
-      </div>{" "}
+        <div className="item-icons">
+          <a href="https://www.facebook.com/">
+            <img className="item-icons_img" src={fbsquare} alt="facebook" />
+          </a>
+          <a href="https://www.linkedin.com">
+            <img
+              className="item-icons_img"
+              src={linkedinsquare}
+              alt="linkedin"
+            />
+          </a>
+        </div>
+      </div>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}

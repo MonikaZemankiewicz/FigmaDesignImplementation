@@ -21,7 +21,8 @@ const Team = () => {
 
 const breakPoints = [
   { width: 1, itemsToShow: 2 },
-  { width: 620, itemsToShow: 4 },
+  { width: 620, itemsToShow: 3 },
+  { width: 1100, itemsToShow: 4 },
 ];
 
 const items = [
