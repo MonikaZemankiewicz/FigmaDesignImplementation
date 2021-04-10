@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import closebtn from "../assets/closebtn.svg";
 import fbsquare from "../assets/fbsquare.svg";
 import linkedinsquare from "../assets/linkedinsquare.svg";
+import { TeamModal } from "./TeamModal";
 
 const Item = ({ name, image, desc, position }) => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
@@ -18,7 +19,7 @@ const Item = ({ name, image, desc, position }) => {
         />
         <h2>{name}</h2>
         <span>{position}</span>
-        <p>{desc}</p>
+        <p className="p-cut">{desc}</p>
         <div className="item-icons">
           <a href="https://www.facebook.com/">
             <img className="item-icons_img" src={fbsquare} alt="facebook" />
@@ -32,6 +33,13 @@ const Item = ({ name, image, desc, position }) => {
           </a>
         </div>
       </div>
+      {/*}
+      <TeamModal
+        modalIsOpen={modalIsOpen}
+        setModalIsOpen={setModalIsOpen}
+        name={name}
+        desc={desc}
+      ></TeamModal>*/}
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
@@ -39,18 +47,14 @@ const Item = ({ name, image, desc, position }) => {
         style={{
           overlay: {
             position: "fixed",
-            top: 73,
+            top: 0,
             left: 0,
             right: 0,
             bottom: 0,
             backgroundColor: "rgba(37, 43, 66, 0.5)",
+            zIndex: 300,
           },
           content: {
-            position: "absolute",
-            top: "40px",
-            left: "40px",
-            right: "40px",
-            bottom: "40px",
             border: "1px solid #ccc",
             background: "#fff",
             overflow: "auto",
@@ -66,6 +70,7 @@ const Item = ({ name, image, desc, position }) => {
         </button>
         <div className="modal-info">
           <h2>{name}</h2>
+          <span>{position}</span>
           <p>{desc}</p>
         </div>
       </Modal>

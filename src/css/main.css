@@ -89,7 +89,7 @@ Navbar
 
 .nav-center {
   width: 90vw;
-  max-width: 1170px;
+  max-width: 1240px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -499,7 +499,7 @@ Team
   opacity: 0.5;
 }
 
-.team p {
+.p-cut {
   font-family: "Sen", sans-serif;
   text-align: center;
   font-size: 12px;
@@ -578,7 +578,7 @@ Team
     margin-bottom: 0.8rem;
   }
 
-  .team p {
+  .p-cut {
     font-size: 18px;
     line-height: 24px;
     -webkit-line-clamp: 4;
@@ -603,6 +603,21 @@ Modal
 ===============
 */
 
+@media screen and (min-width: 768px) {
+  .ReactModal__Content {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(-50%) !important;
+    max-width: 630px !important;
+    max-height: 740px !important;
+  }
+}
+
+.modal-info {
+  text-align: center;
+}
+
 .modal-info h2 {
   font-family: "Sen", sans-serif;
   text-align: center;
@@ -612,6 +627,18 @@ Modal
   font-weight: 400;
   color: rgba(56, 165, 219, 1);
   margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-info span {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 13px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: 400;
+  color: rgba(1, 18, 38, 1);
+  opacity: 0.5;
 }
 
 .modal-info p {
@@ -622,7 +649,8 @@ Modal
   font-style: normal;
   font-weight: 400;
   color: rgba(69, 81, 95, 1);
-  margin-top: 10px;
+  margin-top: 2rem;
+  -webkit-line-clamp: ;
 }
 
 .modal-info button {
@@ -632,6 +660,16 @@ Modal
   position: absolute;
   right: 4.75%;
   top: 2.75%;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-info p {
+    font-size: 18px;
+  }
+
+  .modal-info h2 {
+    font-size: 40px;
+  }
 }
 
 /*
@@ -863,6 +901,6 @@ Footer
 
 @media screen and (min-width: 1440px) {
   .footer-top .nav-logo {
-    margin-left: 3rem;
+    margin-left: 7rem;
   }
 }
