@@ -67,7 +67,7 @@ const Hero = () => {
           <img src={facebook} alt="facebook" />
         </a>
       </div>
-      <div className="video-container">
+      <div className="video-container" style={{ backgroundIimage: { fluid } }}>
         <button className="play-button" onClick={() => setModalIsOpen(true)}>
           <img src={play} alt="play" />
         </button>

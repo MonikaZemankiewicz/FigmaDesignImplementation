@@ -163,10 +163,10 @@ Hero
 .hero {
   position: relative;
   top: 71px;
-  background: url("../assets/background.svg");
+  background: url("../assets/bgmobile.svg");
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 827px;
+  background-size: 934px;
   padding: 0 1.2rem;
   margin-bottom: 71px;
 }
@@ -273,7 +273,7 @@ Hero
   margin-left: auto;
   margin-right: auto;
   max-width: 638px;
-  background: url("../assets/video.svg");
+  background: url("../assets/video.png");
   background-size: cover;
   display: flex;
   align-items: center;
@@ -325,8 +325,8 @@ Hero
 
 @media screen and (min-width: 660px) {
   .hero {
-    background-size: 1280px;
-    background-position: top -15px left -170px;
+    background-size: 1440px;
+    background-position: top center;
     padding: 5rem 4rem;
   }
 
@@ -374,7 +374,7 @@ Hero
 
   .arrow {
     margin-top: 6rem;
-    margin-bottom: 10rem;
+    margin-bottom: 11rem;
   }
 
   .arrow img {
@@ -399,13 +399,7 @@ Hero
 
 @media screen and (min-width: 914px) {
   .hero {
-    background-size: 1440px;
-    background-position: top center;
     padding-left: 7%;
-  }
-
-  .arrow img {
-    margin-top: 6rem;
   }
 
   .video-container {
@@ -415,8 +409,10 @@ Hero
 
 @media screen and (min-width: 1440px) {
   .hero {
+    background: url("../assets/background.svg");
     background-size: cover;
-    background-position: top center;
+    background-repeat: no-repeat;
+    background-position: top -50px center;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(12, 0.1fr);
@@ -609,13 +605,15 @@ Modal
     top: 50% !important;
     left: 50% !important;
     transform: translateX(-50%) translateY(-50%) !important;
-    max-width: 630px !important;
+    width: 630px !important;
+    height: fit-content !important;
     max-height: 740px !important;
   }
 }
 
 .modal-info {
   text-align: center;
+  padding: 1rem;
 }
 
 .modal-info h2 {
