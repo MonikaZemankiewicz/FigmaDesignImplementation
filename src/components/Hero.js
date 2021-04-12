@@ -6,8 +6,8 @@ import play from "../assets/play.svg";
 import { graphql, useStaticQuery } from "gatsby";
 import Modal from "react-modal";
 import Video from "../components/Video";
-
 import closebtn from "../assets/closebtn.svg";
+import Image from "gatsby-image";
 
 const query = graphql`
   {
@@ -31,8 +31,8 @@ const Hero = () => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
 
   return (
-    <header className="hero clearfix">
-      <div className="hero-text">
+    <header className="hero">
+      <div className="hero__text">
         <h1>
           The first <nobr>fully-automatic</nobr> social crypto trading platform
           with real crypto currency
@@ -41,14 +41,14 @@ const Hero = () => {
       <div className="newsletter">
         <p>Subscribe and get the latest information</p>
         <form>
-          <div className="form-group">
+          <div className="hero__form-group">
             <input
               type="email"
               name="email"
               placeholder="Enter your email"
-              className="form-control"
+              className="form-control hero__form-control "
             />
-            <button type="submit" className="submit-btn btn">
+            <button type="submit" className="hero__submit-btn btn">
               Subscribe
             </button>
           </div>
@@ -56,19 +56,22 @@ const Hero = () => {
       </div>
       <div className="arrow">
         <a href="/#Team">
-          <img src={arrow} alt="logo " />
+          <img className="arrow__img" src={arrow} alt="logo " />
         </a>
       </div>
       <div className="social-media">
         <a href="https://twitter.com/">
-          <img src={twitter} alt="twitter" />
+          <img className="social-media__img" src={twitter} alt="twitter" />
         </a>
         <a href="https://www.facebook.com/">
-          <img src={facebook} alt="facebook" />
+          <img className="social-media__img" src={facebook} alt="facebook" />
         </a>
       </div>
-      <div className="video-container" style={{ backgroundIimage: { fluid } }}>
-        <button className="play-button" onClick={() => setModalIsOpen(true)}>
+      <div className="video-container">
+        <button
+          className="video-container__play-button"
+          onClick={() => setModalIsOpen(true)}
+        >
           <img src={play} alt="play" />
         </button>
       </div>
@@ -84,6 +87,7 @@ const Hero = () => {
             right: 0,
             bottom: 0,
             backgroundColor: "rgba(37, 43, 66, 0.5)",
+            zIndex: 300,
           },
           content: {
             position: "absolute",
@@ -101,7 +105,10 @@ const Hero = () => {
           },
         }}
       >
-        <button className="close-modal" onClick={() => setModalIsOpen(false)}>
+        <button
+          className="modal__close-btn"
+          onClick={() => setModalIsOpen(false)}
+        >
           <img src={closebtn} alt="close modal" />
         </button>
         <Video

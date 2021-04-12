@@ -1,49 +1,42 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "react-modal";
 import closebtn from "../assets/closebtn.svg";
 import fbsquare from "../assets/fbsquare.svg";
 import linkedinsquare from "../assets/linkedinsquare.svg";
-import { TeamModal } from "./TeamModal";
 
 const Item = ({ name, image, desc, position }) => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
 
   return (
     <section>
-      <div className="item">
+      <div className="team__item">
         <img
           onClick={() => setModalIsOpen(true)}
-          className="item_profile-pic"
+          className="team_profile-pic"
           src={image}
           alt="profile picture"
         />
-        <h2>{name}</h2>
-        <span>{position}</span>
-        <p className="p-cut">{desc}</p>
-        <div className="item-icons">
+        <h2 className="team__name">{name}</h2>
+        <span className="team__position">{position}</span>
+        <p className="team__short-desc">{desc}</p>
+        <div className="team__icons">
           <a href="https://www.facebook.com/">
-            <img className="item-icons_img" src={fbsquare} alt="facebook" />
+            <img className="team__icons__img" src={fbsquare} alt="facebook" />
           </a>
           <a href="https://www.linkedin.com">
             <img
-              className="item-icons_img"
+              className="team__icons__img"
               src={linkedinsquare}
               alt="linkedin"
             />
           </a>
         </div>
       </div>
-      {/*}
-      <TeamModal
-        modalIsOpen={modalIsOpen}
-        setModalIsOpen={setModalIsOpen}
-        name={name}
-        desc={desc}
-      ></TeamModal>*/}
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
         ariaHideApp={false}
+        className="team__modal"
         style={{
           overlay: {
             position: "fixed",
@@ -55,6 +48,11 @@ const Item = ({ name, image, desc, position }) => {
             zIndex: 300,
           },
           content: {
+            position: "absolute",
+            top: "40px",
+            left: "40px",
+            right: "40px",
+            bottom: "40px",
             border: "1px solid #ccc",
             background: "#fff",
             overflow: "auto",
@@ -65,13 +63,16 @@ const Item = ({ name, image, desc, position }) => {
           },
         }}
       >
-        <button className="close-modal" onClick={() => setModalIsOpen(false)}>
+        <button
+          className="modal__close-btn"
+          onClick={() => setModalIsOpen(false)}
+        >
           <img src={closebtn} alt="close modal" />
         </button>
-        <div className="modal-info">
-          <h2>{name}</h2>
-          <span>{position}</span>
-          <p>{desc}</p>
+        <div className="modal__info">
+          <h2 className="modal__name">{name}</h2>
+          <span className="modal__position">{position}</span>
+          <p className="modal__desc">{desc}</p>
         </div>
       </Modal>
     </section>

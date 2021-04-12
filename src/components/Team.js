@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Carousel from "react-elastic-carousel";
 import Item from "../components/Item";
 import team1 from "../assets/team1.svg";
@@ -9,7 +9,7 @@ import team4 from "../assets/team4.svg";
 const Team = () => {
   return (
     <section className="team" id="Team">
-      <h1> team </h1>
+      <h1 className="team__title"> team </h1>
       <Carousel breakPoints={breakPoints}>
         {items.map((item, index) => {
           return <Item key={item.id} index={index} {...item} />;

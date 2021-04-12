@@ -15,6 +15,7 @@ module.exports = {
         path: `${__dirname}/src/assets/`,
       },
     },
+
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
