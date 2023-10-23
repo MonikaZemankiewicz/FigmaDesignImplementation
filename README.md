@@ -1,4 +1,4 @@
-# Implementation of a figma project 
+# Implementation of a figma project for ethworks recruitment process
 
 Done with GatsbyJS.
 
